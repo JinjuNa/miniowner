@@ -61,7 +61,7 @@ class ProjectBox extends Component {
         if(this.props.status === '모집 중'){ statusClass += 'green' }
         if(this.props.status === '진행 중'){ statusClass += 'red' }
         if(this.props.status === '종료'){ statusClass += 'gray' }
-        const link = '/item?num='+this.props.num;
+        const link = '/item/'+this.props.num;
     return (
         <LI>
             <a href={link}>

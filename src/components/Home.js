@@ -9,7 +9,7 @@ const CarouselImg = styled.div`
   background-color:#666;
 `
 
-function CarouselComponent(props){
+const CarouselComponent = (props) =>{
   return (
     <Carousel.Item>
       <CarouselImg className="d-block w-100"/>
@@ -21,8 +21,7 @@ function CarouselComponent(props){
   )
 }
 
-class CarouselBox extends Component {
-  render(){
+const CarouselBox = () => {
     const slideItem = [
       {num : 1, label : 'First slide label', detail : '첫번째 슬라이더에 관련된 내용입니다.', color: 'blue'},
       {num : 2, label : 'Second slide label', detail : '두번째 슬라이더에 관련된 내용입니다.', color : 'red'},
@@ -34,9 +33,9 @@ class CarouselBox extends Component {
         {slideContent}
       </Carousel>
     )
-  }
 }
-function Home() {
+
+const Home = () => {
   return (
     <div className="pageContainer">
         {/* <CarouselBox /> */}
