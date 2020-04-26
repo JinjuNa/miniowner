@@ -1,6 +1,5 @@
 import React from 'react';
 // import {BrowserRouter as Link} from 'react-router-dom'
-import {Navbar} from 'react-bootstrap';
 import logo from '../logo.svg';
 import NavList from './NavList';
 
@@ -15,10 +14,10 @@ const Footer = () => {
   return (
     <footer>
       <div className="wrap">
-        <Navbar>
-            <Navbar.Brand href="/"><img src={logo} className="App-logo" alt="logo" /></Navbar.Brand>
+        <div>
+            <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
             <NavList menuList={item}/>
-        </Navbar>
+        </div>
         <div className="copyRight">
             (주) 딘두놀 | 대표이사 : 나진주 <br />
             서울특별시 마포구

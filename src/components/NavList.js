@@ -1,20 +1,19 @@
 import React from 'react';
-import {Nav} from 'react-bootstrap';
 
 const NavItem = ({title, link}) => {
     return (
-        <Nav.Item>
-            <Nav.Link href={link}>{title}</Nav.Link>
-        </Nav.Item>
+        <div>
+            <a href={link}>{title}</a>
+        </div>
     )
 }
 
 const NavList = ({menuList, className}) => {
         const listItem = menuList.map((item, index)=> <NavItem title={item.title} link={item.link} key={index}/>);
     return (
-        <Nav className={className}>
+        <div className={className}>
             {listItem}
-        </Nav>
+        </div>
     )
 }
 

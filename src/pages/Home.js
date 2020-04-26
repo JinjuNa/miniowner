@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Carousel } from 'react-bootstrap';
 import ProjectComponent from '../components/ProjectComponent';
+import './Home.css';
 
 const CarouselImg = styled.div`
   width:800px;
@@ -11,13 +11,13 @@ const CarouselImg = styled.div`
 
 const CarouselComponent = (props) =>{
   return (
-    <Carousel.Item>
+    <div>
       <CarouselImg className="d-block w-100"/>
-      <Carousel.Caption>
+      <div>
         <h3>{props.label}</h3>
         <p>{props.detail}</p>
-      </Carousel.Caption>
-    </Carousel.Item>
+      </div>
+    </div>
   )
 }
 
@@ -29,44 +29,21 @@ const CarouselBox = () => {
     ]
     const slideContent = slideItem.map((slideItem, index)=> <CarouselComponent label={slideItem.label} detail={slideItem.detail} key={index} />);
     return(
-      <Carousel>
+      <div>
         {slideContent}
-      </Carousel>
+      </div>
     )
 }
 
 const Home = () => {
   return (
     <div className="pageContainer">
-        {/* <CarouselBox /> */}
-        <Carousel>
-          <Carousel.Item>
-            <CarouselImg className="d-block w-100" />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <CarouselImg className="d-block w-100"/>
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <CarouselImg className="d-block w-100"/>
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+        <CarouselBox />
 
         <section className="projectSection">
           <h2>미니인턴을 신청하세요</h2>
           <p>이제 집, 학교, 도서관, 카페에서 인턴십을 경험하고, 실무역량평가로 취업하세요.</p>
-          <div style={{textAlign : 'right', paddingRight : '10px'}}>
+          <div className="allProject">
             <a href="/project">모든 기업과제 보러가기</a>
           </div>
           <ProjectComponent limit={8} />

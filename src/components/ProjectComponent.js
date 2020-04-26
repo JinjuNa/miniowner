@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-// import {BrowserRouter as Link} from 'react-router-dom'
-// import {Nav, Navbar} from 'react-bootstrap';
+
 const UL = styled.ul`
     text-align:center;
 `
@@ -55,31 +54,31 @@ const LI = styled.li`
         color : gray;
     }
 `
-const ProjectBox = () => {
+const ProjectBox = (props) => {
     let statusClass ='dateContainer ';
-    if(this.props.status === '모집 중'){ statusClass += 'green' }
-    if(this.props.status === '진행 중'){ statusClass += 'red' }
-    if(this.props.status === '종료'){ statusClass += 'gray' }
-    const link = '/item/'+this.props.num;
+    if(props.status === '모집 중'){ statusClass += 'green' }
+    if(props.status === '진행 중'){ statusClass += 'red' }
+    if(props.status === '종료'){ statusClass += 'gray' }
+    const link = '/item/'+props.num;
 
     return (
         <LI>
             <a href={link}>
             <div className="imgContainer"></div>
             <div className="txtContainer">
-                <p>{this.props.category}</p>
-                <h3>{this.props.title}</h3>
+                <p>{props.category}</p>
+                <h3>{props.title}</h3>
             </div>
             <div className= {statusClass}>
-                {this.props.status}
+                {props.status}
             </div>
             </a>
         </LI>
     )
 }
 
-const ProjectComponent = () => {
-    const limit = this.props.limit;
+const ProjectComponent = (props) => {
+    const limit = props.limit;
     const projectItem = [
         {num : 1, title : '\'중고나라\' 브랜드 개선 아이디어 제안', category : '기획아이디어제안마케팅', status : '모집 중', dateActive : true, date : '2020.04.27', img : '1.jpg' },
         {num : 2, title : '새로운 소비 트랜드, \'그린 컨슈머\'를 겨냥한 친환경 화장품 파우치 기획', category : '기획아이디어제안마케팅', status : '모집 중', dateActive : true, date : '2020.04.27', img : '2.jpg' },

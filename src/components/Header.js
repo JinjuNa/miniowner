@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
 // import {BrowserRouter as Link} from 'react-router-dom'
-import {Navbar} from 'react-bootstrap';
 import NavList from './NavList';
 
 const Header =() => {
@@ -17,11 +16,11 @@ const Header =() => {
   return (
     <header>
       <div className="wrap">
-        <Navbar>
-            <Navbar.Brand href="/"><img src={logo} className="App-logo" alt="logo" /></Navbar.Brand>
+        <div>
+            <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
             <NavList menuList={item}/>
             <NavList menuList={loginItem} className="mr-auto" />
-        </Navbar>
+        </div>
         
       </div>
     </header>
