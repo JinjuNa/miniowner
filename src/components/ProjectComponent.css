@@ -1,0 +1,47 @@
+.project-item {
+    width:25%;
+    height:250px;
+    display:inline-block;
+    box-sizing:border-box;
+    padding:10px;
+    vertical-align:top;
+}
+.project-item p {
+    color:#ddd;
+    font-size:10px;
+}
+.project-item h3 {
+    font-size:12px;
+}
+
+.project-item .imgContainer {
+    width:100%;
+    height:100px;
+    background-color:#999;
+}
+
+.project-item .txtContainer {
+    background-color : #fff;
+    height:100px;
+    padding:10px;
+}
+
+.project-item .dateContainer {
+    background-color : #fff;
+    border-top: 1px solid #eee;
+    text-align : left;
+    padding:10px;
+    font-size:12px;
+}
+
+.project-item .dateContainer.green {
+    color:green;
+}
+
+.project-item .dateContainer.red {
+    color : red;
+}
+
+.project-item .dateContainer.gray {
+    color : gray;
+}

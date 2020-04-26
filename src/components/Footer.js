@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="wrap">
         <div>
             <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
-            <NavList menuList={item}/>
+            <NavList menuList={item} className="footer-nav"/>
         </div>
         <div className="copyRight">
             (주) 딘두놀 | 대표이사 : 나진주 <br />

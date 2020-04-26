@@ -1,0 +1,25 @@
+/* header */
+header .wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .wrap .header-left{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 60px;
+}
+
+header .wrap .header-right{
+    line-height: 60px;
+}
+
+footer .footer-nav{
+    display: inline-block;
+    line-height: 60px;
+    vertical-align: top;
+}
+
+.nav-link{
+    padding: 10px;
+}

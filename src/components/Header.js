@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../logo.svg';
-// import {BrowserRouter as Link} from 'react-router-dom'
 import NavList from './NavList';
 
 const Header =() => {
@@ -18,10 +17,11 @@ const Header =() => {
       <div className="wrap">
         <div>
             <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
-            <NavList menuList={item}/>
-            <NavList menuList={loginItem} className="mr-auto" />
+            <NavList menuList={item} className="header-left"/>
         </div>
-        
+        <div>
+            <NavList menuList={loginItem} className="header-right"/>
+        </div>
       </div>
     </header>
   )

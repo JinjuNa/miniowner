@@ -1,59 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import './ProjectComponent.css';
 
-const UL = styled.ul`
-    text-align:center;
-`
-
-const LI = styled.li`
-    width:25%;
-    height:250px;
-    display:inline-block;
-    box-sizing:border-box;
-    padding:10px;
-    vertical-align:top;
-
-    & p {
-        color:#ddd;
-        font-size:10px;
-    }
-
-    & h3 {
-        font-size:12px;
-    }
-
-    & .imgContainer {
-        width:100%;
-        height:100px;
-        background-color:#999;
-    }
-
-    & .txtContainer {
-        background-color : #fff;
-        height:100px;
-        padding:10px;
-    }
-
-    & .dateContainer {
-        background-color : #fff;
-        border-top: 1px solid #eee;
-        text-align : left;
-        padding:10px;
-        font-size:12px;
-    }
-
-    & .dateContainer.green {
-        color:green;
-    }
-
-    & .dateContainer.red {
-        color : red;
-    }
-
-    & .dateContainer.gray {
-        color : gray;
-    }
-`
 const ProjectBox = (props) => {
     let statusClass ='dateContainer ';
     if(props.status === '모집 중'){ statusClass += 'green' }
@@ -62,7 +9,7 @@ const ProjectBox = (props) => {
     const link = '/item/'+props.num;
 
     return (
-        <LI>
+        <li className="project-item">
             <a href={link}>
             <div className="imgContainer"></div>
             <div className="txtContainer">
@@ -73,7 +20,7 @@ const ProjectBox = (props) => {
                 {props.status}
             </div>
             </a>
-        </LI>
+        </li>
     )
 }
 
@@ -99,9 +46,9 @@ const ProjectComponent = (props) => {
     ]
     const projectListItem = projectItem.slice(0, limit).map((projectItem, index)=> <ProjectBox num={projectItem.num} title={projectItem.title} category={projectItem.category} status={projectItem.status} key={index}/>);
     return(
-        <UL>
+        <ul>
         {projectListItem}
-        </UL>
+        </ul>
     )
 }
 
