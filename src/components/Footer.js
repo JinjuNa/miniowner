@@ -1,6 +1,6 @@
 import React from 'react';
 // import {BrowserRouter as Link} from 'react-router-dom'
-import {Nav, Navbar} from 'react-bootstrap';
+import {Navbar} from 'react-bootstrap';
 import logo from '../logo.svg';
 import NavList from './NavList';
 

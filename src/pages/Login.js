@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Login() {
+const Login = () => {
   return (
     <div className="pageContainer">
         Login

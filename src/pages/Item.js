@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Item() {
+const Item = () => {
   return (
     <div className="pageContainer">
         Item
