@@ -3,12 +3,11 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
-import Project from './components/Project';
-import Item from './components/Item';
-import Signup from './components/Signup';
-import Login from './components/Login';
+import Home from './pages/Home';
+import Project from './pages/Project';
+import Item from './pages/Item';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
       <Router>
       <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
           <Route path="/project" component={Project}/>
           <Route path="/item/:num" component={Item}/>
           <Route path="/signup" component={Signup} />

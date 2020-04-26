@@ -4,34 +4,6 @@ import logo from '../logo.svg';
 import {Navbar} from 'react-bootstrap';
 import NavList from './NavList';
 
-// const NavItem = (props) => {
-//     return (
-//         <Nav.Item>
-//             <Nav.Link href={props.link}>{props.title}</Nav.Link>
-//         </Nav.Item>
-//     )
-// }
-
-// const NavList = () => {
-        
-//         const listItem = item.map((item, index)=> <NavItem title={item.title} link={item.link} key={index}/>);
-//     return (
-//         <Nav className="mr-auto">
-//             {listItem}
-//         </Nav>
-//     )
-// }
-
-// const LoginNav = () => {
-        
-//         const loginListItem = loginItem.map((loginItem, index)=> <NavItem title={loginItem.title} link={loginItem.link} key={index}/>);
-//         return(
-//             <Nav>
-//                 {loginListItem}
-//             </Nav>
-//         )
-// }
-
 const Header =() => {
     const item = [
         {title : '서비스소개', link : './about'},

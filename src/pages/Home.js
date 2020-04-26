@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'react-bootstrap';
-import ProjectComponent from './ProjectComponent';
+import ProjectComponent from '../components/ProjectComponent';
 
 const CarouselImg = styled.div`
   width:800px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectComponent from './ProjectComponent';
+import ProjectComponent from '../components/ProjectComponent';
 
 
 function Project() {
