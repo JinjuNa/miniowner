@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import './Slider.css';
 
 const CarouselComponent = ({slideItem}) =>{
   return (

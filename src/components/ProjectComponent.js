@@ -6,7 +6,7 @@ const ProjectBox = (props) => {
     if(props.status === '모집 중'){ statusClass += 'green' }
     if(props.status === '진행 중'){ statusClass += 'red' }
     if(props.status === '종료'){ statusClass += 'gray' }
-    const link = '/item/'+props.num;
+    const link = '/projectInfo/'+props.num;
 
     return (
         <li className="project-item">
