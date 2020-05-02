@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import ProjectComponent from '../components/ProjectComponent';
 import './Home.css';
 import Slider from '../components/Slider';

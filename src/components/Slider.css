@@ -1,0 +1,28 @@
+.slider-container-wrap {
+    width: 60%;
+    overflow: hidden;
+}
+
+.slider-container{
+    width: 100%;
+    display: flex;
+}
+
+.slide{
+    height: 30vh;
+    flex: 0 0 100%;
+}
+
+.slider-button {
+    all: unset;
+    border: 1px solid coral;
+    padding: 0.5em 2em;
+    color: coral;
+    border-radius: 10px;
+}
+
+.slider-button:hover{
+    transition: all 0.3s ease-in-out;
+    background-color: coral;
+    color: #fff;
+}
