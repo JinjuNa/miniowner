@@ -4,10 +4,10 @@ import ProjectComponent from '../components/ProjectComponent';
 
 const Project = () => {
   return (
-    <div className="pageContainer">
+    <main className="page-container">
         Project
         <ProjectComponent limit={16} />
-    </div>
+    </main>
   )
 }
 

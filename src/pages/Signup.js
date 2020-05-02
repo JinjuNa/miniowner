@@ -3,9 +3,9 @@ import React from 'react';
 
 const Signup = () => {
   return (
-    <div className="pageContainer">
+    <main className="page-container">
         Signup
-    </div>
+    </main>
   )
 }
 

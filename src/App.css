@@ -21,15 +21,15 @@ header .wrap, footer .wrap{
   margin:0 auto;
 }
 
-.copyRight{
+.copy-right{
   text-align: center;
 }
 
-.pageContainer {
+.page-container {
   padding:50px 0;
 }
 
-.projectSection {
+.project-section {
   padding:50px 0;
 }
 

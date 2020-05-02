@@ -18,7 +18,7 @@ const Footer = () => {
             <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
             <NavList menuList={item} className="footer-nav"/>
         </div>
-        <div className="copyRight">
+        <div className="copy-right">
             (주) 딘두놀 | 대표이사 : 나진주 <br />
             서울특별시 마포구
             이메일 : dindoo0524@gmail.com

@@ -2,7 +2,7 @@ import React from 'react';
 import './ProjectComponent.css';
 
 const ProjectBox = (props) => {
-    let statusClass ='dateContainer ';
+    let statusClass ='date-container ';
     if(props.status === '모집 중'){ statusClass += 'green' }
     if(props.status === '진행 중'){ statusClass += 'red' }
     if(props.status === '종료'){ statusClass += 'gray' }
@@ -11,8 +11,8 @@ const ProjectBox = (props) => {
     return (
         <li className="project-item">
             <a href={link}>
-            <div className="imgContainer"></div>
-            <div className="txtContainer">
+            <div className="img-container"></div>
+            <div className="txt-container">
                 <p>{props.category}</p>
                 <h3>{props.title}</h3>
             </div>

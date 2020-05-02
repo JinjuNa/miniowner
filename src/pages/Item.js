@@ -3,9 +3,9 @@ import React from 'react';
 
 const Item = () => {
   return (
-    <div className="pageContainer">
+    <main className="page-container">
         Item
-    </div>
+    </main>
   )
 }
 

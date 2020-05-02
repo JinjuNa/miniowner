@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const Slide = styled.div`
-  width: 100%;
-  height: 70vh;
+  // width: 100%;
+  height: 30vh;
+  flex: 0 0 100%;
 `;
 
 const Container = styled.div`
@@ -29,11 +30,11 @@ const SliderContainer = styled.div`
   display: flex; //이미지들을 가로로 나열합니다.
 `;
 
-const CarouselComponent = (props) =>{
+const CarouselComponent = ({slideItem}) =>{
   return (
-    <Slide>
-        <h3>{props.label}</h3>
-        <p>{props.detail}</p>
+    <Slide style={{backgroundColor : slideItem.color}}>
+        <h3>{slideItem.label}</h3>
+        <p>{slideItem.detail}</p>
     </Slide>
   )
 }
@@ -66,13 +67,28 @@ const Slider = () => {
       {num : 2, label : 'Second slide label', detail : '두번째 슬라이더에 관련된 내용입니다.', color : 'red'},
       {num : 3, label : 'Third slide label', detail : '세번째 슬라이더에 관련된 내용입니다.', color : 'yellow'}
     ]
-    const slideContent = slideItem.map((slideItem, index)=> <CarouselComponent label={slideItem.label} detail={slideItem.detail} key={index} />);
+    const slideContent = slideItem.map((slideItem, index)=> <CarouselComponent slideItem={slideItem} key={index} />);
     
     useEffect(() => {
         slideRef.current.style.transition = "all 0.5s ease-in-out";
         slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
       }, [currentSlide]);
     
+    setInterval(() => {
+      
+    }, 4000);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        if (currentSlide >= TOTAL_SLIDES) { // 더 이상 넘어갈 슬라이드가 없으면 슬라이드를 초기화합니다.
+          setCurrentSlide(0);
+      } else {
+          setCurrentSlide(currentSlide + 1);
+      }
+      }, 4000);
+      return () => clearInterval(interval);
+    }, );
+
     return(
       <Container>
         {currentSlide}
