@@ -1,6 +1,8 @@
 .slider-container-wrap {
-    width: 60%;
+    width: 616px;
     overflow: hidden;
+    position: relative;
+    border-radius: 10px;
 }
 
 .slider-container{
@@ -9,7 +11,8 @@
 }
 
 .slide{
-    height: 30vh;
+    /* flex-basis:616px; */
+    height: 400px;
     flex: 0 0 100%;
 }
 

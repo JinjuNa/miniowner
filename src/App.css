@@ -21,6 +21,10 @@ header .wrap, footer .wrap{
   margin:0 auto;
 }
 
+.logo{
+  margin-top: 10px;
+}
+
 .copy-right{
   text-align: center;
 }
